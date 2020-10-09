@@ -38,6 +38,8 @@ The default training and model options are:
 - `--metrics`: **accuracy**
 - `--out`: **model.h5**
 
+(The models already made does not use these options, they also use more layers)
+
 ## Notes
 
 - tensorflow 2.1.0 which is required, uses the AVX instruction set by default. If you get the error "Illegal Instruction", you can either configure your VM to use SandyBridge (if run in a VM) or build tensorflow from source.
