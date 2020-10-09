@@ -1,0 +1,36 @@
+[Common]
+PidFile=begcla.pid
+
+[Database]
+Host = 127.0.0.1
+Port = 3306
+Username = root
+Password = password
+Database = evosc
+
+[Server]
+ListenAddress = 127.0.0.1
+ListenPort = 4005
+Backlog = 5
+MaxClients = 5
+RejectOnMaxClients = true
+MaxClientsRetryInterval = 500
+DataBlockSize = 2048
+
+[Classifier]
+Model = models/model1.h5
+
+[Logging]
+Level = debug
+
+[FileLog]
+Enabled = true
+File = log.txt
+Format = [%%(asctime)s][%%(name)s][%%(levelname)s] %%(message)s
+
+[Graylog]
+# requires graypy (pip install graypy)
+Enabled = false
+Host = 127.0.0.1
+Port = 12201
+Format = [%%(asctime)s][%%(name)s][%%(levelname)s] %%(message)s
